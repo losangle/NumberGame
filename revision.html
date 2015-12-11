@@ -1,0 +1,209 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<style>
+		table, td, th{border:1px solid black; width:300px; height:100px}
+		td {color: grey; width : 33.3%; height:100px}
+		.skill {text-align:left}
+		.t {vertical-align:top}
+		.m {vertical-align:middle}
+		.b {vertical-align:bottom}
+		.l {text-align:left}
+		.c {text-align:center}
+		.r {text-align:right}
+	</style>
+	<script src="js/main.js"></script>
+
+</head>
+<body>
+
+	<canvas id="gameCanvas" onclick = "drawAvatar();" width="400" height ="300" ></canvas>
+
+	<!--The name attribute in textarea is for php as an identifier. Use same id and name for any entity-->
+	<form action = "handler.php" method = "get">
+		<p> Give some feedback</p>
+		<textarea rows = "3" cols="60" name="feedback">
+			Please Enter your text here
+		</textarea>
+		<br/>
+		<!-- The type is important as a submit, instead of button -->
+		<input type="submit" value="send">
+	</form>
+	
+	<form>
+		Some other form.
+		<input type = "text" name = "morefeedback">
+		<br>
+		Check one of the things below <br>
+		<input type = "checkbox" name="items" value = "check1"> like it <br>
+		<input type = "checkbox" name="items" value = "check2"> medium<br>
+		<input type = "checkbox" name="items" value = "check3"> not at all<br>
+		
+	
+		tick one thing below <br>
+		<input type="radio" name="iq" value="high"> high <br>
+		<input type="radio" name="iq" value="medium"> medium <br>
+		<input type="radio" name="iq" value="low"> low <br>		
+		
+		<!-- radio groups themselves by their name-->
+		Some thing more on eq <br>
+		<input type="radio" name="eq" value="high"> high <br>
+		<input type="radio" name="eq" value="medium"> medium <br>
+		<input type="radio" name="eq" value="low"> low <br>		
+		
+		<!-- Do not use get for password pass -->
+		<input type = "password" name="pwd"> <br>
+		
+		<select name = "cities">
+			<option name = "hongkong"> Hongkong <option>
+			<option name = "hongkong"> Hongkong <option>
+			<option name = "hongkong"> Hongkong <option>
+		</select>
+		</form>
+		
+		<!-- autofocus value placeholder required -->
+		
+		<form>
+			<label for="fname"> First Name:</label>
+			<input type = "text" id="fname" name="fname" value = "It does not disappear" autofocus>
+			<br>
+			<label for="lname"> Last Name:</label>
+			<input type = "text" id="lname" placeholder="It disappears">
+			<br>
+			<label for="age"> Age:</label>
+			<input id ="age" required>
+			<br>
+			<input type = "submit">
+		</form>
+
+		<!-- when upload the file remember 1.enctype 2.post 3. name tage for the <input>-->
+		<form enctype="multipart/form-data" method="post">
+			<input type="file" name="fileToUpload" />
+			<input type="submit" value="Upload the file">
+		</form>
+		
+		<!-- html 5 attribute -->
+		<form>
+			<label for="ages"> Age:</label>
+			<input type = "number" min = "0" max="99" step="1" value = "18" id="ages" name = "ages" value = "age"> <br>
+			<input type = "date"  id="date" name = "date" > <br>
+			<input type = "time"  id="time" name = "time" > <br>
+			<input type = "color" id="color" name = "color" > <br>
+			Good <input type = "range" min = "0" max="99" step="1" value = "50" id="ages" name = "ages" value = "age"> Bad <br>
+		</form>
+		
+		<div>
+			<fieldset>
+				<legend> This is legend</legend>
+				Well this is line 1 <br>
+				Thi is line 2 <br>
+			</fieldset>
+		</div>
+	<ul >
+		<li > item 1 </li>
+		<li> item 2 </li>
+	</ul>
+	
+	<ol type = "A">
+		<li> <i id = "top"> italic </i> </li>
+		<li> <em> emphasized</em> </li>
+	</ol>
+	
+	
+	<ol start = "11" reversed> 
+		<li> <b> black </b> </li>
+		<li> <strong> black too!</strong> </li>
+	</ol>
+	
+	<!-- strong and em are just more important than i and b -->
+	<mark> Highlight mark </mark>
+	<p> For mathematics: x<sub>1</sub><sup>2</sup></p>
+	<!--USE MATHML instead of sub and sup-->
+	
+	<p> This word is <ins>inserted </ins> </p>
+	<p> This word is <del> deleted </del> </p>
+	
+	<img src="static/unnamed.jpg" width = "50%">
+	<!-- percentage is comparable to the container of img-->
+	<img src="static/unnamed.jpg" width = "300">
+	<!--browser auto resize the height-->
+	
+	<audio src="static/Kalimba.mp3" controls> </audio>
+	<!--
+	<audio src="static/Kalimba.mp3" autoplay loop> </audio>
+	-->
+	
+	
+	<!--
+	<this_new_html_tag>
+		<p>Sorry, your browser is not up to date</p>
+	</this_new_html_tag>
+	-->
+	<!--this section will not be picked up by new browsers but by old ones -->
+	<!-- EXAMPLE 
+	
+	<video src="" alt="Sorry you can't see this video due to copy right reasons"autoplay loop>
+		<p> Sorry, your browser is not up to date</p>
+	</video>
+	
+	<video src="" alt="Sorry you can't see this video due to copy right reasons"autoplay loop/>
+    <!--video is the same approach with audio -->
+	
+	<p>
+	<h2> Link</h2>
+		<a href="http://www.gmail.com/">gmail</a>
+		<a href="http://www.google.com/"><img src="static/button.jpg"</a>
+		
+		
+		<a href="#top">Go to top of this page</a>
+		<a href="http://www.zhihu.com/question/20009756#zh-question-collapsed-wrap">TO to zhihu</a>
+	</p>
+	
+	<!-- Use lorem ipsum -->
+	
+	<div>
+	<h2> Link</h2>
+		<p>
+			consectetur adipiscing elit. Aenean varius vitae felis ac laoreet. Etiam sed nisl ligula. Integer vulputate velit sit amet odio efficitur efficitur.<br> Nam tempus eu leo in vehicula. Fusce egestas lorem sit amet urna maximus fermentum eu eu elit. Cras quis urna lacus. Proin finibus vehicula rutrum. Quisque id mauris nec nunc ornare blandit. Nullam nec ipsum elementum, cursus sem nec, suscipit magna. Proin eget magna molestie, viverra nisl sit amet, vehicula velit. Vivamus rhoncus dolor nisi, eget vehicula nulla luctus ut. Quisque in quam ac neque semper iaculis in vitae mi. Vestibulum imperdiet sodales turpis, eu facilisis risus interdum vel. Cras felis metus, fringilla quis sodales in, tempor a tortor. Fusce nibh lectus, tincidunt in mollis in, semper vel nisl. Curabitur facilisis, dui in hendrerit suscipit, nisi justo efficitur est, ut tincidunt felis lacus ut massa.
+		</p>
+		
+		<p>
+			nsectetur volutpat orci feugiat vel. Pellentesque pharetra mauris justo, non iaculis ligula rhoncus vitae. Maecenas nisl est, consequat eutempusegetsollici<wbr>tudinvitaeaugue. Aenean dictum est eu ipsum posuere, tempus euismod mi efficitur. In congue, metus at interdum aliquam, tortor magna eleifend orci, vel ultrices elit mi sit amet neque. Curabitur ut sodales lorem, ut ornare lacus. Etiam est neque, consectetur eget ipsum nec, consequat fringilla metus. Fusce eget tincidunt leo, viverra convallis nibh. Maecenas vestibulum tincidunt sapien quis vestibulum. Proin vehicula libero et nibh mollis, et eleifend augue sagittis. Proin massa nisi, suscipit non quam quis, malesuada vulputate ligula. Morbi quis nunc magna. Maecenas scelerisque a nulla non elementum. Nulla eget ipsum fermentum sapien ultrices fermentum. Donec turpis justo, laoreet id magna a, cursus posuere nunc.
+		</p>
+		
+		<p>
+			Tlacerat. Vivamus suscipit sapien orci, quis sodales odio dapibus a. Quisque pretium pulvinar tempus. Donec et tempor enim, tincidunt vestibulum massa. Nulla mauris velit, faucibus et semper ac,<hr> dapibus eu odio. Aenean ut mi metus. Duis diam ligula, tincidunt in lorem et, pellentesque rutrum urna. Morbi sed venenatis risus, vitae ultrices leo. Aenean quis felis non ligula dictum dapibus sit amet eget justo. Duis viverra blandit lectus 
+		</p>
+	</div>
+	<!-- br强制换行 wbr看情况换行 hr线性-- chrome 上hr前自动加上了</p>-->
+	
+	
+	<!--Example of multiple class-->
+	<table>
+		<thead>
+			<tr>
+				<th class = "skill" >Skills</th> <th>Difficulty</th> <th>My Level</th>
+			</tr>
+		</thead>
+			<tr>
+				<td class = "t l">HTML</td> <td class = "t c">Not at all</td> <td class = "t r">..</td>
+			</tr>
+			<tr>
+				<td class = "m l">..</td> <td class = "m c">..</td> <td class = "m r">..</td>
+			</tr>
+						<tr>
+				<td class = "b l">HTML</td> <td class = "b c">Not at all</td> <td class = "b r">..</td>
+			</tr>
+		<tbody>
+		</tbody>
+	</table>
+	
+	
+	
+	
+	
+	
+	
+</body>
+</html>

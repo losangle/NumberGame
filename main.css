@@ -1,0 +1,34 @@
+p {
+	color:purple
+}
+
+#top {
+	color:red
+}
+
+.thisisaclass{
+	color:blue
+}
+
+ul li {
+	color :red
+}
+
+h1:hover {
+	color:red
+}
+
+p a: link {
+	color:red
+}
+p a: visited {
+	color:blue
+}
+p a: active {
+	color:yellow
+}
+
+canvas {
+    border: 1px solid black;
+	cursor: none;
+}
